@@ -29,7 +29,9 @@ if os.environ.get('DEBUG_SET_TO_FALSE'):
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'the-junior-tech-society.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'the-junior-tech-society.herokuapp.com', 'localhost', '*']
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-roibeardrua-thejuniorte-gitwim6lgn7.ws-eu86.gitpod.io']
 
 AUTHENTICATION_BACKENDS = [
     
@@ -40,8 +42,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 
 ]
-
-
 
 
 INSTALLED_APPS = [
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'homepage',
+    'contact',
 ]
 
 SITE_ID = 1
